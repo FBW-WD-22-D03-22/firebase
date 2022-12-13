@@ -45,16 +45,6 @@ export const AdminPage = () => {
   const [usersList, setUsersList] = useState([]);
   const { users } = useContext(AuthContext);
 
-  // read all Users
-
-  // create new User
-
-  // update User
-
-  // delete User
-
-  // ABER...
-
   return (
     <div className="admin-view">
       {testUser && (

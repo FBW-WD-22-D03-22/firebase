@@ -1,4 +1,8 @@
 import { useEffect, useState } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+
+import { db } from '../../../firebase.config';
+import { collection, getDocs } from 'firebase/firestore';
 
 const user = {
   firstName: 'Max',
@@ -17,6 +21,18 @@ const user = {
 };
 
 export const LandingPage = () => {
+  const { usersList, setUsersList } = useContext(AuthContext);
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const usersRef = collection(db, 'users');
+      const usersSnapshot = await getDocs(usersRef);
+      const users = usersSnapshot.docs.map((doc) => doc.data());
+      setUsersList(users);
+    };
+    getUsers();
+  }, []);
+
   return (
     <div className="landing-page">
       <img
