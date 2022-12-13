@@ -1,0 +1,56 @@
+.landing-page {
+  img {
+    width: 50vw;
+    height: 10vw;
+    object-fit: cover;
+    display: block;
+    margin: 2vh auto;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 10vh auto;
+  }
+}
+
+.article {
+  display: flex;
+  width: 66vw;
+  margin: 0 auto;
+  padding: 0 2vw;
+  justify-content: space-around;
+  align-self: center;
+  outline: 3px solid lightsalmon;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      margin: 0.1em 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    button {
+      margin: 0.5em 0;
+      font-size: 1rem;
+      padding: 0.5em 1em;
+      border: none;
+      background-color: lightcoral;
+      &:first-of-type {
+        background-color: lightgreen;
+      }
+    }
+  }
+}

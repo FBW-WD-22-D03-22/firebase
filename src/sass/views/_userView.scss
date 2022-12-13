@@ -1,0 +1,23 @@
+@use '../components/components.scss' as *;
+@use '../utilities/utilities.scss' as *;
+
+.user-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  &__address {
+    display: flex;
+    justify-content: space-around;
+
+    & p {
+      margin: 5vh .25em;
+    }
+  }
+}
