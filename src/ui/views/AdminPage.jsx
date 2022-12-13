@@ -80,10 +80,9 @@ export const AdminPage = () => {
           </div>
         </>
       )}
-      <Form formType = "addUser" />
 
       <div className="admin-board">
-        <div className="user-create">
+        <div className="user__create">
           <h2>Create New User</h2>
           <Form formType="create" />
         </div>
@@ -91,28 +90,24 @@ export const AdminPage = () => {
           <ul>
             {testUsers.map((user, i) => (
               <li key={i}>
-                <div className="user-info">
+                <div className="user__info">
                   <div className="user-left">
                     <img src={user.imageUrl} alt="" />
                   </div>
                   <div className="user-right">
-                    <span>
-                      {user.firstName && <p>first name: {user.firstName}</p>}
-                      {user.lastName && <p>last name: {user.lastName}</p>}
-                    </span>
-                    <span>
-                      {user.email && <p>email: {user.email}</p>}
-                      {user.role && <p>role: {user.role}</p>}
-                      {user.age && <p>age: {user.age}</p>}
-                      {user.street && (
-                        <p>
-                          {street}, {city}, {country}, {ZIP}
-                        </p>
-                      )}
-                    </span>
+                    {user.firstName && <p>first name: {user.firstName}</p>}
+                    {user.lastName && <p>last name: {user.lastName}</p>}
+                    {user.email && <p>email: {user.email}</p>}
+                    {user.role && <p>role: {user.role}</p>}
+                    {user.age && <p>age: {user.age}</p>}
+                    {user.street && (
+                      <p>
+                        {street}, {city}, {country}, {ZIP}
+                      </p>
+                    )}
                   </div>
                 </div>
-                <div className="user-edit">
+                <div className="user__edit">
                   <Form
                     formType="update"
                     userInfo={{
@@ -126,7 +121,7 @@ export const AdminPage = () => {
                       ZIP: user.ZIP,
                       email: user.email,
                       role: user.role,
-                      imgUrl: user.imgUrl,
+                      imgUrl: user.imageUrl,
                       id: user.id,
                     }}
                   />

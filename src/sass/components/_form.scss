@@ -1,7 +1,9 @@
 @use './button.scss' as *;
 form {
   padding: 1rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 5vh auto;
   width: 20vw;
   background-color: lightblue;
@@ -25,11 +27,24 @@ label {
   margin: 0.5rem auto;
   font-size: 0.875rem;
   font-weight: 600;
-  width: 66%;
+  width: 14vw;
 }
 
 input {
   margin-left: 1rem;
   border: 1px solid lightgray;
   padding: 0.5em 1em;
+}
+
+.form__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.user__actions {
+  button {
+    margin: 0.5rem;
+    padding: .5em 1em;
+  }
 }

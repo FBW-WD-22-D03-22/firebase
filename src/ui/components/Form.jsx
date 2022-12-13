@@ -62,60 +62,62 @@ export const Form = (props) => {
 
   return (
     <>
-      <form action="">
-        <label htmlFor="">
-          Profile Image
-          <input type="text" onChange={(e) => setImageUrl(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          First Name
-          <input type="text" onChange={(e) => setFirstName(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          Last Name
-          <input type="text" onChange={(e) => setLastName(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          Age
-          <input type="number" onChange={(e) => setAge(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          Street
-          <input type="text" onChange={(e) => setStreet(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          Number
-          <input type="number" onChange={(e) => setNumber(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          ZIP
-          <input type="number" onChange={(e) => setZIP(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          City
-          <input type="text" onChange={(e) => setCity(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          Country
-          <input type="text" onChange={(e) => setCountry(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          email
-          <input type="email" onChange={(e) => setEmail(e.target.value)} />
-        </label>
-        <label htmlFor="">
-          Role
-          <input type="text" onChange={(e) => setRole(e.target.value)} />
-        </label>
-      </form>
-      <div className="user__actions">
-        {formType === 'create' && <button onClick={addUser}>Add User</button>}
-        {formType === 'update' && (
-          <>
-            <button onClick={updateUser}>Update User</button>
-            <button onClick={deleteUser}>Delete User</button>
-          </>
-        )}
+      <div className="form__container">
+        <form action="">
+          <label htmlFor="">
+            Profile Image
+            <input type="text" onChange={(e) => setImageUrl(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            First Name
+            <input type="text" onChange={(e) => setFirstName(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            Last Name
+            <input type="text" onChange={(e) => setLastName(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            Age
+            <input type="number" onChange={(e) => setAge(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            Street
+            <input type="text" onChange={(e) => setStreet(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            Number
+            <input type="number" onChange={(e) => setNumber(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            ZIP
+            <input type="number" onChange={(e) => setZIP(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            City
+            <input type="text" onChange={(e) => setCity(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            Country
+            <input type="text" onChange={(e) => setCountry(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            email
+            <input type="email" onChange={(e) => setEmail(e.target.value)} />
+          </label>
+          <label htmlFor="">
+            Role
+            <input type="text" onChange={(e) => setRole(e.target.value)} />
+          </label>
+        </form>
+        <div className="user__actions">
+          {formType === 'create' && <button onClick={addUser}>Add User</button>}
+          {formType === 'update' && (
+            <>
+              <button onClick={updateUser}>Update User</button>
+              <button onClick={deleteUser}>Delete User</button>
+            </>
+          )}
+        </div>
       </div>
     </>
   );
